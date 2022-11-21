@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    1. h1 - h6 (Heading)
+    2. p (Paragraph)
+    3. img (Image)
+    4. a (Anchor)
+    5. ul-li (UnOrderedList - ListItem)
+    6. table (Table)
+    7. input (Input)
+    8. button
+    9. div
+
+    CSS
+    3 cách để sử dụng css : Inline , external , internal
+    CSS Selectors : ID và Class
+    Nested CSS với các params 
+    Mức độ ưu tiên của CSS :  
+    - Internal và External chỉ có độ ưu tiên mới hơn khi khai báo mới hơn
+    - Inline > ID > Class > TagElement
+    - Equal Specificity (Mới hơn thì được ưu tiên)
+    - Universal selector and inherited
+ -->
+<!-- Phần đầu -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F8-Shop</title>
+
+    <!-- Internal CSS -->
+    <!-- <style>
+        h1 {
+            color: red;
+            font-size: 50px;
+        }
+    </style> -->
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        .backgroundUrl {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'), url('./assets/img/350x150.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+</head>
+
+<!-- Phần thân -->
+
+<body>
+    <div>
+        <h1 title="Đây là tiêu đề" id="first-heading">
+            <!-- Inline CSS : style="color: red;" -->
+            Xin chào các bạn
+        </h1>
+        <h1 class="second-heading">
+            Xin chào các bạn 2
+        </h1>
+        <h1 class="second-heading">
+            Xin chào các bạn 3
+        </h1>
+        <h1>
+            Xin chào các bạn 4
+        </h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi neque officiis dolorem fugiat id. Repudiandae
+            unde veniam modi, cumque facilis nemo distinctio. Nisi expedita molestias tempora, dolor atque quae nemo?
+        </p>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="hoang-hon">
+        <a href="http://fullstack.edu.vn">Đến trang f8</a>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive</li>
+            <li>React JS</li>
+        </ul>
+        <table>
+            <thead>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Địa chỉ</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Dương</td>
+                    <td>Hà Nội</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Minh</td>
+                    <td>Quảng Ninh</td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="checkbox" name="checkbox" id="1" aria-label="checkbox">
+        <input type="radio" name="gender" id="2" aria-label="radio">
+        <!-- Demo Comments -->
+        <img src="https://cdn.pixabay.da.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="demo"
+            onerror="this.src = './assets/img/350x150.png'">
+        <div class="backgroundUrl">
+            demo
+        </div>
+    </div>
+</body>
+
+</html>

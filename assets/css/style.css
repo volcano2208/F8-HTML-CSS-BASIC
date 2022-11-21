@@ -1,0 +1,75 @@
+/* 
+- Sử dụng biến trong css 
+- CSS Unit : 
+   + Absolute Units : px , pt , cm , mm , inch , pc (Không bị thay đổi)
+   + Relative Units : 
+        rem(phụ thuộc vào thẻ html)
+        em(Phụ thuộc vào thẻ gần nhất chứa nó)  
+          (Bị thay đổi khi browser thay đổi)
+        % : phụ thuộc vào thẻ chứa nó
+        vw - viewport width : chiều ngang của browser
+        vh - viewport height : chiều dọc của browser
+        vmin , vmax , ex , ch
+   + Functions :
+       - var() - truy cập biến css
+       - linear-gradient()
+       - rgba() - mã màu trong suốt / thường dùng để làm màu nền
+       - rgb() - mã màu rgb
+       - calc() - tính toán unit trong css
+       - attr() - sử dụng lớp giả example : "("attr(href)")"
+   + pseudo-classes : (lớp giả)
+       - :root
+       - :hover (Di chuột) 
+       - :active (Bấm và giữ chuột)
+       - :first-child 
+       - :last-child
+   + pseudo-elements : (Phần tử giả)
+       - ::before (Phần tử giả luôn đứng ở đầu)
+       - ::after (Phẩn tử giả luôn đứng ở cuối)
+       - ::first-letter 
+       - ::first-line
+       - ::selection   
+   + padding , border (làm tăng tổng kích thước của box)
+   + margin , 
+   + box-sizing : khoảng cách chữ trong box mà không làm tăng tổng kích thước 
+                  tuy nhiên padding quá lớn thì sẽ không giữ đc
+   + background-image : 
+            - url
+            - size : contain , cover , 100%
+            - repeat    
+            - origin : đổ hình ảnh từ lớp border || padding || content      
+            - position : vị trí hình ảnh 
+   + Position : 
+     - Relative : vị trí tương đối (Phụ thuộc vào chính nó - lấy chính nó làm gốc toạ độ)
+     - Absolute : vị trí tuyệt đối (Phụ thuộc vào thẻ cha gần nhất có position - lấy thẻ cha làm gốc toạ độ)
+     - Fixed : vị trí vào khung trình duyệt
+     - Sticky : vị trí bám dính vào khung trình duyệt
+   + Các căn giữa trong CSS : 
+     - tra cứu những thuộc tính css inherit 
+     cách 1 : line-height + height + text-align : center
+     cách 2 : dislay : flex , align-items : center , justify-content : center 
+     cách 3 : set position cha : relative , con là absolute + top + left + transform 
+   + Kĩ thuật fallback image (Hiển thị ảnh dự phòng)
+     
+*/
+:root {
+  --text-color: green;
+}
+
+html {
+  font-size: 100%;
+}
+
+h1 {
+  --my-color: red;
+  color: var(--my-color);
+  font-size: 1rem;
+}
+
+#first-heading {
+  color: blueviolet;
+}
+
+.second-heading {
+  color: darkgray;
+}
